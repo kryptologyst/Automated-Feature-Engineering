@@ -1,0 +1,8 @@
+#@package model
+_target_: src.models.advanced_automl.AutoMLModel
+name: "advanced_automl"
+params:
+  framework: "optuna"
+  n_trials: 100
+  timeout: 3600
+  random_state: 42

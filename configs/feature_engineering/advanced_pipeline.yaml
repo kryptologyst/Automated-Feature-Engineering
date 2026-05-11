@@ -1,0 +1,10 @@
+#@package feature_engineering
+_target_: src.data.feature_engineering.AdvancedFeaturePipeline
+name: "advanced_pipeline"
+params:
+  enable_imputation: true
+  enable_transformations: true
+  enable_discretization: true
+  enable_scaling: true
+  enable_polynomial_features: true
+  enable_feature_selection: true

@@ -1,0 +1,59 @@
+# Default configuration for Automated Feature Engineering
+defaults:
+  - _self_
+  - model: classical_baseline
+  - data: boston_housing
+  - feature_engineering: basic_pipeline
+
+# Global settings
+seed: 42
+device: auto  # auto, cpu, cuda, mps
+log_level: INFO
+
+# Paths
+paths:
+  data_dir: data
+  raw_data_dir: ${paths.data_dir}/raw
+  processed_data_dir: ${paths.data_dir}/processed
+  models_dir: models
+  assets_dir: assets
+  logs_dir: logs
+
+# Training settings
+training:
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: ${seed}
+  cv_folds: 5
+  scoring: neg_mean_squared_error
+
+# Feature engineering settings
+feature_engineering:
+  enable_imputation: true
+  enable_transformations: true
+  enable_discretization: true
+  enable_scaling: true
+  enable_advanced: false
+
+# Model settings
+model:
+  name: "classical_baseline"
+  params: {}
+
+# Evaluation settings
+evaluation:
+  metrics:
+    - mse
+    - rmse
+    - mae
+    - r2
+    - mape
+  save_predictions: true
+  save_feature_importance: true
+
+# Safety and compliance
+safety:
+  enable_privacy_protection: true
+  enable_bias_detection: true
+  max_memory_usage_gb: 8
+  disclaimer_required: true

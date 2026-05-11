@@ -1,0 +1,7 @@
+#@package data
+_target_: src.data.boston_housing.BostonHousingDataModule
+name: "boston_housing"
+params:
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: 42

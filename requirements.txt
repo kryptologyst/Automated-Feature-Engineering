@@ -17,7 +17,7 @@ auto-sklearn>=0.15.0
 tpot>=0.12.0
 
 # Meta/Hybrid AI specific
-ray[tune]>=2.5.0
+# ray[tune]>=2.5.0
 avalanche-lib>=0.3.0
 pyro-ppl>=1.8.0
 numpyro>=0.13.0
